@@ -1,0 +1,14 @@
+{
+    "include": ["repos/core/js/src/**/*"],
+    "files": ["repos/core/js/shims.d.ts"],
+    "compilerOptions": {
+        "target": "es5",
+        "lib": ["esnext", "dom"],
+        "outDir": "types/",
+        "declaration": true,
+        "emitDeclarationOnly": true,
+        "allowJs": true,
+        "esModuleInterop": true,
+        "jsx": "preserve"
+    }
+}
