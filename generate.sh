@@ -45,10 +45,10 @@ push() {
     # push typings to repository
     cd types
     git add .
-    git commit -m "Generate Flarum $1 typings" --author "GitHub Action <action@github.com>"
+    git commit -m "Update typings ($1)" --author "GitHub Action <action@github.com>"
     git push 
 }
 
 
-generate master 0.1.0-beta.16-dev
-push 0.1.0-beta.16
+generate master 0.1.0-beta.16
+push 0.1.0-beta.16-dev
