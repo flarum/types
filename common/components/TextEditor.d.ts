@@ -11,7 +11,7 @@
  * - `disabled`
  * - `preview`
  */
-export default class TextEditor extends Component<import("../../common/Component").ComponentAttrs> {
+export default class TextEditor extends Component<import("../Component").ComponentAttrs> {
     /**
      * The value of the editor.
      *
@@ -56,6 +56,6 @@ export default class TextEditor extends Component<import("../../common/Component
      */
     onsubmit(): void;
 }
-import Component from "../../common/Component";
+import Component from "../Component";
 import BasicEditorDriver from "../utils/BasicEditorDriver";
-import ItemList from "../../common/utils/ItemList";
+import ItemList from "../utils/ItemList";

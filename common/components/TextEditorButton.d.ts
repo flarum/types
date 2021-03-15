@@ -5,4 +5,4 @@
 export default class TextEditorButton extends Button {
     static initAttrs(attrs: any): void;
 }
-import Button from "../../common/components/Button";
+import Button from "./Button";

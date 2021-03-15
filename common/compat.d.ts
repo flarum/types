@@ -2,6 +2,7 @@ declare var _default: {
     extend: typeof extend;
     Session: typeof Session;
     Store: typeof Store;
+    'utils/BasicEditorDriver': typeof BasicEditorDriver;
     'utils/evented': {
         handlers: any;
         getHandlers(event: string): any[];
@@ -69,6 +70,8 @@ declare var _default: {
     'components/Button': typeof Button;
     'components/Modal': typeof Modal;
     'components/GroupBadge': typeof GroupBadge;
+    'components/TextEditor': typeof TextEditor;
+    'components/TextEditorButton': typeof TextEditorButton;
     Model: typeof Model;
     Application: typeof Application;
     'helpers/fullTime': typeof fullTime;
@@ -86,6 +89,7 @@ export default _default;
 import * as extend from "./extend";
 import Session from "./Session";
 import Store from "./Store";
+import BasicEditorDriver from "./utils/BasicEditorDriver";
 import liveHumanTimes from "./utils/liveHumanTimes";
 import ItemList from "./utils/ItemList";
 import mixin from "./utils/mixin";
@@ -139,6 +143,8 @@ import ModalManager from "./components/ModalManager";
 import Button from "./components/Button";
 import Modal from "./components/Modal";
 import GroupBadge from "./components/GroupBadge";
+import TextEditor from "./components/TextEditor";
+import TextEditorButton from "./components/TextEditorButton";
 import Model from "./Model";
 import Application from "./Application";
 import fullTime from "./helpers/fullTime";

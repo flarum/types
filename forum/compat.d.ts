@@ -2,6 +2,7 @@ declare var _default: {
     extend: typeof import("../common/extend");
     Session: typeof import("../common/Session").default;
     Store: typeof import("../common/Store").default;
+    'utils/BasicEditorDriver': typeof BasicEditorDriver;
     'utils/evented': {
         handlers: any;
         getHandlers(event: string): any[];
@@ -69,6 +70,8 @@ declare var _default: {
     'components/Button': typeof import("../common/components/Button").default;
     'components/Modal': typeof import("../common/components/Modal").default;
     'components/GroupBadge': typeof import("../common/components/GroupBadge").default;
+    'components/TextEditor': typeof TextEditor;
+    'components/TextEditorButton': typeof TextEditorButton;
     Model: typeof import("../common/Model").default;
     Application: typeof import("../common/Application").default;
     'helpers/fullTime': typeof import("../common/helpers/fullTime").default;
@@ -188,12 +191,14 @@ declare var _default: {
     ForumApplication: typeof ForumApplication;
 };
 export default _default;
+import BasicEditorDriver from "../common/utils/BasicEditorDriver";
+import TextEditor from "../common/components/TextEditor";
+import TextEditorButton from "../common/components/TextEditorButton";
 import KeyboardNavigatable from "./utils/KeyboardNavigatable";
 import slidable from "./utils/slidable";
 import History from "./utils/History";
 import alertEmailConfirmation from "./utils/alertEmailConfirmation";
 import Pane from "./utils/Pane";
-import BasicEditorDriver from "./utils/BasicEditorDriver";
 import ComposerState from "./states/ComposerState";
 import DiscussionListState from "./states/DiscussionListState";
 import GlobalSearchState from "./states/GlobalSearchState";
@@ -222,8 +227,6 @@ import HeaderSecondary from "./components/HeaderSecondary";
 import ComposerButton from "./components/ComposerButton";
 import DiscussionList from "./components/DiscussionList";
 import ReplyPlaceholder from "./components/ReplyPlaceholder";
-import TextEditor from "./components/TextEditor";
-import TextEditorButton from "./components/TextEditorButton";
 import AvatarEditor from "./components/AvatarEditor";
 import Post from "./components/Post";
 import SettingsPage from "./components/SettingsPage";

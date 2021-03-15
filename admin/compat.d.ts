@@ -2,6 +2,7 @@ declare var _default: {
     extend: typeof import("../common/extend");
     Session: typeof import("../common/Session").default;
     Store: typeof import("../common/Store").default;
+    'utils/BasicEditorDriver': typeof import("../common/utils/BasicEditorDriver").default;
     'utils/evented': {
         handlers: any;
         getHandlers(event: string): any[];
@@ -69,6 +70,8 @@ declare var _default: {
     'components/Button': typeof import("../common/components/Button").default;
     'components/Modal': typeof import("../common/components/Modal").default;
     'components/GroupBadge': typeof import("../common/components/GroupBadge").default;
+    'components/TextEditor': typeof import("../common/components/TextEditor").default;
+    'components/TextEditorButton': typeof import("../common/components/TextEditorButton").default;
     Model: typeof import("../common/Model").default;
     Application: typeof import("../common/Application").default;
     'helpers/fullTime': typeof import("../common/helpers/fullTime").default;

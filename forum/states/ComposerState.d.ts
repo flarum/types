@@ -166,5 +166,5 @@ declare namespace ComposerState {
         export const FULLSCREEN: string;
     }
 }
-import EditorDriverInterface from "../utils/EditorDriverInterface";
+import EditorDriverInterface from "../../common/utils/EditorDriverInterface";
 import Stream from "../../common/utils/Stream";

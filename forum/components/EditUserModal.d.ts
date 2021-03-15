@@ -11,11 +11,14 @@ export default class EditUserModal extends Modal {
     fields(): ItemList;
     activate(): void;
     data(): {
-        username: any;
-        relationships: {
-            groups: any[];
-        };
+        relationships: {};
     };
+    nonAdminEditingAdmin(): boolean;
+    /**
+     * @internal
+     * @protected
+     */
+    protected userIsAdmin(user: any): any;
 }
 import Modal from "../../common/components/Modal";
 import Stream from "../../common/utils/Stream";
