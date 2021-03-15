@@ -24,11 +24,15 @@ generate() {
 
     cd types/
 
+    cp ../README.md .
+
     # create package.json
     cat > package.json << EOF
 {
     "name": "flarum",
-    "version: "$VERSION"
+    "version": "$VERSION",
+    "homepage": "https://flarum.org",
+    "license": "MIT"
 }
 EOF
 
