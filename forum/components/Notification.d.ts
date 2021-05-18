@@ -9,6 +9,7 @@
  * @abstract
  */
 export default class Notification extends Component<import("../../common/Component").ComponentAttrs> {
+    constructor();
     /**
      * Get the name of the icon that should be displayed in the notification.
      *

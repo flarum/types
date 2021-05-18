@@ -4,6 +4,7 @@
  * overwrite the previous one.
  */
 export default class ModalManager extends Component<import("../Component").ComponentAttrs> {
+    constructor();
     animateShow(readyCallback: any): void;
     animateHide(): void;
 }

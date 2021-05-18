@@ -3,10 +3,11 @@
  * notifications, grouped by discussion.
  */
 export default class NotificationList extends Component<import("../../common/Component").ComponentAttrs> {
-    $notifications: JQuery<any>;
-    $scrollParent: JQuery<any>;
+    constructor();
+    content(state: any): any;
+    $notifications: JQuery<HTMLElement>;
+    $scrollParent: JQuery<HTMLElement> | JQuery<Window & typeof globalThis>;
     boundScrollHandler: any;
-    onremove(): void;
     scrollHandler(): void;
     /**
      * If the NotificationList component isn't in a panel (e.g. on NotificationPage when mobile),

@@ -16,12 +16,15 @@ declare var _default: {
     'utils/mixin': typeof import("../common/utils/mixin").default;
     'utils/humanTime': typeof import("../common/utils/humanTime").default;
     'utils/computed': typeof import("../common/utils/computed").default;
+    'utils/insertText': typeof import("../common/utils/insertText").default;
+    'utils/styleSelectedText': typeof import("../common/utils/styleSelectedText").default;
     'utils/Drawer': typeof import("../common/utils/Drawer").default;
     'utils/anchorScroll': typeof import("../common/utils/anchorScroll").default;
     'utils/RequestError': typeof import("../common/utils/RequestError").default;
     'utils/abbreviateNumber': typeof import("../common/utils/abbreviateNumber").default;
     'utils/string': typeof import("../common/utils/string");
     'utils/SubtreeRetainer': typeof import("../common/utils/SubtreeRetainer").default;
+    'utils/escapeRegExp': typeof import("../common/utils/escapeRegExp").default;
     'utils/extract': typeof import("../common/utils/extract").default;
     'utils/ScrollListener': typeof import("../common/utils/ScrollListener").default;
     'utils/stringToColor': typeof import("../common/utils/stringToColor").default;
@@ -34,11 +37,12 @@ declare var _default: {
     }, namespace: string) => {
         [key: string]: any;
     };
-    'utils/classList': typeof import("../common/utils/classList").default;
+    'utils/classList': (...classes: import("clsx").ClassValue[]) => string;
     'utils/extractText': typeof import("../common/utils/extractText").default;
     'utils/formatNumber': typeof import("../common/utils/formatNumber").default;
     'utils/mapRoutes': typeof import("../common/utils/mapRoutes").default;
     'utils/withAttr': (key: string, cb: Function) => (this: Element) => void;
+    'utils/throttleDebounce': typeof import("../common/utils/throttleDebounce");
     'models/Notification': typeof import("../common/models/Notification").default;
     'models/User': typeof import("../common/models/User").default;
     'models/Post': typeof import("../common/models/Post").default;
@@ -70,8 +74,10 @@ declare var _default: {
     'components/Button': typeof import("../common/components/Button").default;
     'components/Modal': typeof import("../common/components/Modal").default;
     'components/GroupBadge': typeof import("../common/components/GroupBadge").default;
-    'components/TextEditor': typeof TextEditor;
-    'components/TextEditorButton': typeof TextEditorButton;
+    'components/TextEditor': typeof import("../common/components/TextEditor").default;
+    'components/TextEditorButton': typeof import("../common/components/TextEditorButton").default;
+    'components/Tooltip': typeof import("../common/components/Tooltip").default;
+    'components/EditUserModal': typeof import("../common/components/EditUserModal").default;
     Model: typeof import("../common/Model").default;
     Application: typeof import("../common/Application").default;
     'helpers/fullTime': typeof import("../common/helpers/fullTime").default;
@@ -84,6 +90,7 @@ declare var _default: {
     'helpers/userOnline': typeof import("../common/helpers/userOnline").default;
     'helpers/listItems': typeof import("../common/helpers/listItems").default;
     'resolvers/DefaultResolver': typeof import("../common/resolvers/DefaultResolver").default;
+    'states/PaginatedListState': typeof import("../common/states/PaginatedListState").default;
 } & {
     'utils/PostControls': {
         controls(post: any, context: any): import("../common/utils/ItemList").default;
@@ -121,7 +128,6 @@ declare var _default: {
     };
     'utils/Pane': typeof Pane;
     'utils/BasicEditorDriver': typeof BasicEditorDriver;
-    'utils/SuperTextarea': typeof BasicEditorDriver;
     'states/ComposerState': typeof ComposerState;
     'states/DiscussionListState': typeof DiscussionListState;
     'states/GlobalSearchState': typeof GlobalSearchState;
@@ -150,8 +156,6 @@ declare var _default: {
     'components/ComposerButton': typeof ComposerButton;
     'components/DiscussionList': typeof DiscussionList;
     'components/ReplyPlaceholder': typeof ReplyPlaceholder;
-    'components/TextEditor': typeof TextEditor;
-    'components/TextEditorButton': typeof TextEditorButton;
     'components/AvatarEditor': typeof AvatarEditor;
     'components/Post': typeof Post;
     'components/SettingsPage': typeof SettingsPage;
@@ -167,8 +171,6 @@ declare var _default: {
     'components/EventPost': typeof EventPost;
     'components/DiscussionHero': typeof DiscussionHero;
     'components/PostMeta': typeof PostMeta;
-    'components/EditUserModal': typeof EditUserModal;
-    'components/SearchSource': typeof SearchSource;
     'components/DiscussionRenamedPost': typeof DiscussionRenamedPost;
     'components/DiscussionComposer': typeof DiscussionComposer;
     'components/LogInButtons': typeof LogInButtons;
@@ -192,8 +194,6 @@ declare var _default: {
 };
 export default _default;
 import BasicEditorDriver from "../common/utils/BasicEditorDriver";
-import TextEditor from "../common/components/TextEditor";
-import TextEditorButton from "../common/components/TextEditorButton";
 import KeyboardNavigatable from "./utils/KeyboardNavigatable";
 import slidable from "./utils/slidable";
 import History from "./utils/History";
@@ -242,8 +242,6 @@ import PostPreview from "./components/PostPreview";
 import EventPost from "./components/EventPost";
 import DiscussionHero from "./components/DiscussionHero";
 import PostMeta from "./components/PostMeta";
-import EditUserModal from "./components/EditUserModal";
-import SearchSource from "./components/SearchSource";
 import DiscussionRenamedPost from "./components/DiscussionRenamedPost";
 import DiscussionComposer from "./components/DiscussionComposer";
 import LogInButtons from "./components/LogInButtons";

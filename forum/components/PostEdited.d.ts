@@ -7,9 +7,6 @@
  * - `post`
  */
 export default class PostEdited extends Component<import("../../common/Component").ComponentAttrs> {
-    shouldUpdateTooltip: boolean;
-    oldEditedInfo: any;
-    onupdate(): void;
-    rebuildTooltip(): void;
+    constructor();
 }
 import Component from "../../common/Component";

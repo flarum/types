@@ -1,4 +1,3 @@
-/// <reference types="jquery" />
 import * as Mithril from 'mithril';
 export interface ComponentAttrs extends Mithril.Attributes {
 }
@@ -57,6 +56,18 @@ export default abstract class Component<T extends ComponentAttrs = ComponentAttr
      */
     onbeforeupdate(vnode: Mithril.VnodeDOM<T, this>): void;
     /**
+     * @inheritdoc
+     */
+    onupdate(vnode: Mithril.VnodeDOM<T, this>): void;
+    /**
+     * @inheritdoc
+     */
+    onbeforeremove(vnode: Mithril.VnodeDOM<T, this>): void;
+    /**
+     * @inheritdoc
+     */
+    onremove(vnode: Mithril.VnodeDOM<T, this>): void;
+    /**
      * Returns a jQuery object for this component's element. If you pass in a
      * selector string, this method will return a jQuery object, using the current
      * element as its buffer.
@@ -65,11 +76,11 @@ export default abstract class Component<T extends ComponentAttrs = ComponentAttr
      * containing all of the `li` elements inside the DOM element of this
      * component.
      *
-     * @param {String} [selector] a jQuery-compatible selector string
-     * @returns {jQuery} the jQuery object for the DOM node
+     * @param [selector] a jQuery-compatible selector string
+     * @returns the jQuery object for the DOM node
      * @final
      */
-    protected $(selector: any): JQuery<any>;
+    protected $(selector?: string): JQuery;
     /**
      * Convenience method to attach a component without JSX.
      * Has the same effect as calling `m(THIS_CLASS, attrs, children)`.

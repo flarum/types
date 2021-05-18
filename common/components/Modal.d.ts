@@ -9,13 +9,13 @@ export default class Modal extends Component<import("../Component").ComponentAtt
      * Determine whether or not the modal should be dismissible via an 'x' button.
      */
     static isDismissible: boolean;
+    constructor();
     /**
      * Attributes for an alert component to show below the header.
      *
      * @type {object}
      */
     alertAttrs: object;
-    onbeforeremove(): Promise<any>;
     /**
      * Get the class name to apply to the modal.
      *

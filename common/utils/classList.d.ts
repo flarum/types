@@ -1,12 +1,9 @@
 /**
- * The `classList` utility creates a list of class names by joining an object's
- * keys, but only for values which are truthy.
+ * This util exposes `clsx` to core and extensions as a re-usable utility.
  *
- * @example
- * classList({ foo: true, bar: false, qux: 'qaz' });
- * // "foo qux"
+ * For full documentation, see `clsx` on GitHub.
  *
- * @param {Object} classes
- * @return {String}
+ * @see https://github.com/lukeed/clsx
  */
-export default function classList(classes: any): string;
+declare const classList: (...classes: import("clsx").ClassValue[]) => string;
+export default classList;

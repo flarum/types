@@ -7,6 +7,7 @@
  * - `user`
  */
 export default class NotificationGrid extends Component<import("../../common/Component").ComponentAttrs> {
+    constructor();
     /**
      * Information about the available notification methods.
      *

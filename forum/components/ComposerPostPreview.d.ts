@@ -12,7 +12,7 @@
  */
 export default class ComposerPostPreview extends Component<import("../../common/Component").ComponentAttrs> {
     static initAttrs(attrs: any): void;
+    constructor();
     updateInterval: number;
-    onremove(): void;
 }
 import Component from "../../common/Component";

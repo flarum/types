@@ -1,4 +1,5 @@
 export default class DashboardWidget extends Component<import("../../common/Component").ComponentAttrs> {
+    constructor();
     /**
      * Get the class name to apply to the widget.
      *

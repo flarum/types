@@ -4,6 +4,7 @@
  * @abstract
  */
 export default class Page extends Component<import("../Component").ComponentAttrs> {
+    constructor();
     /**
      * A class name to apply to the body while the route is active.
      *
@@ -22,6 +23,5 @@ export default class Page extends Component<import("../Component").ComponentAttr
      * @type {Boolean}
      */
     useBrowserScrollRestoration: boolean;
-    onremove(): void;
 }
 import Component from "../Component";

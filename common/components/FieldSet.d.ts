@@ -8,5 +8,6 @@
  * The children should be an array of items to show in the fieldset.
  */
 export default class FieldSet extends Component<import("../Component").ComponentAttrs> {
+    constructor();
 }
 import Component from "../Component";

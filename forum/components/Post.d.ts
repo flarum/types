@@ -10,6 +10,7 @@
  * @abstract
  */
 export default class Post extends Component<import("../../common/Component").ComponentAttrs> {
+    constructor();
     loading: boolean;
     /**
      * Set up a subtree retainer so that the post will not be redrawn
@@ -18,7 +19,6 @@ export default class Post extends Component<import("../../common/Component").Com
      * @type {SubtreeRetainer}
      */
     subtree: SubtreeRetainer;
-    onupdate(): void;
     /**
      * Get attributes for the post element.
      *

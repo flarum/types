@@ -3,6 +3,7 @@
  * forum.
  */
 export default class WelcomeHero extends Component<import("../../common/Component").ComponentAttrs> {
+    constructor();
     hidden: string | boolean;
     /**
      * Hide the welcome hero.

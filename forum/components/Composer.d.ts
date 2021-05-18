@@ -4,6 +4,7 @@
  * `show`, `hide`, `close`, `minimize`, `fullScreen`, and `exitFullScreen`.
  */
 export default class Composer extends Component<import("../../common/Component").ComponentAttrs> {
+    constructor();
     /**
      * The composer's "state".
      *
@@ -17,9 +18,7 @@ export default class Composer extends Component<import("../../common/Component")
      */
     active: boolean;
     prevPosition: any;
-    onupdate(): void;
     handlers: {};
-    onremove(): void;
     /**
      * Add the necessary event handlers to the composer's handle so that it can
      * be used to resize the composer.
@@ -59,7 +58,7 @@ export default class Composer extends Component<import("../../common/Component")
     /**
      * Animate the Composer into the new position by changing the height.
      */
-    animateHeightChange(): JQuery.Promise<JQuery<any>, any, any>;
+    animateHeightChange(): JQuery.Promise<JQuery<HTMLElement>, any, any>;
     /**
      * Show the Composer backdrop.
      */

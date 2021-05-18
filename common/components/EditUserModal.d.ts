@@ -20,6 +20,6 @@ export default class EditUserModal extends Modal {
      */
     protected userIsAdmin(user: any): any;
 }
-import Modal from "../../common/components/Modal";
-import Stream from "../../common/utils/Stream";
-import ItemList from "../../common/utils/ItemList";
+import Modal from "./Modal";
+import Stream from "../utils/Stream";
+import ItemList from "../utils/ItemList";

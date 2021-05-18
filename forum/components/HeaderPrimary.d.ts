@@ -3,6 +3,7 @@
  * default skin, these are shown just to the right of the forum title.
  */
 export default class HeaderPrimary extends Component<import("../../common/Component").ComponentAttrs> {
+    constructor();
     /**
      * Build an item list for the controls.
      *

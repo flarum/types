@@ -8,7 +8,7 @@ declare namespace _default {
      * @return {ItemList}
      * @public
      */
-    export function controls(discussion: any, context: any): ItemList;
+    function controls(discussion: any, context: any): ItemList;
     /**
      * Get a list of controls for a discussion.
      *
@@ -18,7 +18,7 @@ declare namespace _default {
      * @return {ItemList}
      * @public
      */
-    export function controls(discussion: any, context: any): ItemList;
+    function controls(discussion: any, context: any): ItemList;
     /**
      * Get controls for a discussion pertaining to the current user (e.g. reply,
      * follow).
@@ -29,7 +29,7 @@ declare namespace _default {
      * @return {ItemList}
      * @protected
      */
-    export function userControls(discussion: any, context: any): ItemList;
+    function userControls(discussion: any, context: any): ItemList;
     /**
      * Get controls for a discussion pertaining to the current user (e.g. reply,
      * follow).
@@ -40,7 +40,7 @@ declare namespace _default {
      * @return {ItemList}
      * @protected
      */
-    export function userControls(discussion: any, context: any): ItemList;
+    function userControls(discussion: any, context: any): ItemList;
     /**
      * Get controls for a discussion pertaining to moderation (e.g. rename, lock).
      *
@@ -50,7 +50,7 @@ declare namespace _default {
      * @return {ItemList}
      * @protected
      */
-    export function moderationControls(discussion: any): ItemList;
+    function moderationControls(discussion: any): ItemList;
     /**
      * Get controls for a discussion pertaining to moderation (e.g. rename, lock).
      *
@@ -60,7 +60,7 @@ declare namespace _default {
      * @return {ItemList}
      * @protected
      */
-    export function moderationControls(discussion: any): ItemList;
+    function moderationControls(discussion: any): ItemList;
     /**
      * Get controls for a discussion which are destructive (e.g. delete).
      *
@@ -70,7 +70,7 @@ declare namespace _default {
      * @return {ItemList}
      * @protected
      */
-    export function destructiveControls(discussion: any): ItemList;
+    function destructiveControls(discussion: any): ItemList;
     /**
      * Get controls for a discussion which are destructive (e.g. delete).
      *
@@ -80,7 +80,7 @@ declare namespace _default {
      * @return {ItemList}
      * @protected
      */
-    export function destructiveControls(discussion: any): ItemList;
+    function destructiveControls(discussion: any): ItemList;
     /**
      * Open the reply composer for the discussion. A promise will be returned,
      * which resolves when the composer opens successfully. If the user is not
@@ -93,7 +93,7 @@ declare namespace _default {
      *     composer component, even if it is already open for this discussion.
      * @return {Promise}
      */
-    export function replyAction(goToLast: boolean, forceRefresh: boolean): Promise<any>;
+    function replyAction(goToLast: boolean, forceRefresh: boolean): Promise<any>;
     /**
      * Open the reply composer for the discussion. A promise will be returned,
      * which resolves when the composer opens successfully. If the user is not
@@ -106,55 +106,55 @@ declare namespace _default {
      *     composer component, even if it is already open for this discussion.
      * @return {Promise}
      */
-    export function replyAction(goToLast: boolean, forceRefresh: boolean): Promise<any>;
+    function replyAction(goToLast: boolean, forceRefresh: boolean): Promise<any>;
     /**
      * Hide a discussion.
      *
      * @return {Promise}
      */
-    export function hideAction(): Promise<any>;
+    function hideAction(): Promise<any>;
     /**
      * Hide a discussion.
      *
      * @return {Promise}
      */
-    export function hideAction(): Promise<any>;
+    function hideAction(): Promise<any>;
     /**
      * Restore a discussion.
      *
      * @return {Promise}
      */
-    export function restoreAction(): Promise<any>;
+    function restoreAction(): Promise<any>;
     /**
      * Restore a discussion.
      *
      * @return {Promise}
      */
-    export function restoreAction(): Promise<any>;
+    function restoreAction(): Promise<any>;
     /**
      * Delete the discussion after confirming with the user.
      *
      * @return {Promise}
      */
-    export function deleteAction(): Promise<any>;
+    function deleteAction(): Promise<any>;
     /**
      * Delete the discussion after confirming with the user.
      *
      * @return {Promise}
      */
-    export function deleteAction(): Promise<any>;
+    function deleteAction(): Promise<any>;
     /**
      * Rename the discussion.
      *
      * @return {Promise}
      */
-    export function renameAction(): Promise<any>;
+    function renameAction(): Promise<any>;
     /**
      * Rename the discussion.
      *
      * @return {Promise}
      */
-    export function renameAction(): Promise<any>;
+    function renameAction(): Promise<any>;
 }
 export default _default;
 import ItemList from "../../common/utils/ItemList";

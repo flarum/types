@@ -7,5 +7,6 @@
  * `true` for the link to be external.
  */
 export default class Link extends Component<import("../Component").ComponentAttrs> {
+    constructor();
 }
 import Component from "../Component";

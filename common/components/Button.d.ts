@@ -17,6 +17,7 @@
  * be used to represent any generic clickable control, like a menu item.
  */
 export default class Button extends Component<import("../Component").ComponentAttrs> {
+    constructor();
     /**
      * Get the template for the button's content.
      *

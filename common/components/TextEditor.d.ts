@@ -12,6 +12,7 @@
  * - `preview`
  */
 export default class TextEditor extends Component<import("../Component").ComponentAttrs> {
+    constructor();
     /**
      * The value of the editor.
      *
@@ -22,7 +23,6 @@ export default class TextEditor extends Component<import("../Component").Compone
      * Whether the editor is disabled.
      */
     disabled: any;
-    onupdate(): void;
     buildEditorParams(): {
         classNames: string[];
         disabled: any;

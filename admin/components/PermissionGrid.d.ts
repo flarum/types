@@ -1,4 +1,5 @@
 export default class PermissionGrid extends Component<import("../../common/Component").ComponentAttrs> {
+    constructor();
     permissionItems(): ItemList;
     viewItems(): ItemList;
     startItems(): ItemList;

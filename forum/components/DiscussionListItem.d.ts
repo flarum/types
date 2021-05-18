@@ -8,6 +8,7 @@
  * - `params`
  */
 export default class DiscussionListItem extends Component<import("../../common/Component").ComponentAttrs> {
+    constructor();
     /**
      * Set up a subtree retainer so that the discussion will not be redrawn
      * unless new data comes in.

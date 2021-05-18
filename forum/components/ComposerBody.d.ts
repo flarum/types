@@ -16,6 +16,7 @@
  * @abstract
  */
 export default class ComposerBody extends Component<import("../../common/Component").ComponentAttrs> {
+    constructor();
     composer: any;
     /**
      * Whether or not the component is loading.

@@ -35,7 +35,7 @@ export default class Model {
      *     loaded, and undefined for those that have not.
      * @public
      */
-    public static hasMany(name: string): Array | boolean;
+    public static hasMany(name: string): any[] | boolean;
     /**
      * Transform the given value into a Date object.
      *

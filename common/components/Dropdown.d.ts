@@ -9,6 +9,7 @@
  * - `icon` The name of an icon to show in the dropdown toggle button.
  * - `caretIcon` The name of an icon to show on the right of the button.
  * - `label` The label of the dropdown toggle button. Defaults to 'Controls'.
+ * - `accessibleToggleLabel` The label used to describe the dropdown toggle button to assistive readers. Defaults to 'Toggle dropdown menu'.
  * - `onhide`
  * - `onshow`
  *
@@ -16,6 +17,7 @@
  */
 export default class Dropdown extends Component<import("../Component").ComponentAttrs> {
     static initAttrs(attrs: any): void;
+    constructor();
     showing: boolean;
     /**
      * Get the template for the button.

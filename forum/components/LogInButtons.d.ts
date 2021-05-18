@@ -2,6 +2,7 @@
  * The `LogInButtons` component displays a collection of social login buttons.
  */
 export default class LogInButtons extends Component<import("../../common/Component").ComponentAttrs> {
+    constructor();
     /**
      * Build a list of LogInButton components.
      *

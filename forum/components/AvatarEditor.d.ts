@@ -8,6 +8,7 @@
  * - `user`
  */
 export default class AvatarEditor extends Component<import("../../common/Component").ComponentAttrs> {
+    constructor();
     /**
      * Whether or not an avatar upload is in progress.
      *

@@ -105,6 +105,7 @@ export default class Application {
     data: any;
     title: string;
     titleCount: number;
+    initialRoute: any;
     load(payload: any): void;
     boot(): void;
     bootExtensions(extensions: any): void;

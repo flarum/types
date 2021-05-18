@@ -6,6 +6,7 @@
  * - `discussion`
  */
 export default class DiscussionHero extends Component<import("../../common/Component").ComponentAttrs> {
+    constructor();
     /**
      * Build an item list for the contents of the discussion hero.
      *

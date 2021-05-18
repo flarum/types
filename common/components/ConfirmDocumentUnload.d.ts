@@ -15,8 +15,8 @@
  *
  */
 export default class ConfirmDocumentUnload extends Component<import("../Component").ComponentAttrs> {
+    constructor();
     handler(): any;
     boundHandler: any;
-    onremove(): void;
 }
 import Component from "../Component";

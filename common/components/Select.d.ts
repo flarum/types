@@ -8,5 +8,6 @@
  * - `disabled` Disabled state for the input.
  */
 export default class Select extends Component<import("../Component").ComponentAttrs> {
+    constructor();
 }
 import Component from "../Component";

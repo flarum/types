@@ -2,6 +2,7 @@
  * The `HeaderSecondary` component displays secondary header controls.
  */
 export default class HeaderSecondary extends Component<import("../../common/Component").ComponentAttrs> {
+    constructor();
     /**
      * Build an item list for the controls.
      *

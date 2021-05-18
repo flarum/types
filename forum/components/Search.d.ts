@@ -1,3 +1,33 @@
+import Component, { ComponentAttrs } from '../../common/Component';
+import ItemList from '../../common/utils/ItemList';
+import KeyboardNavigatable from '../utils/KeyboardNavigatable';
+import SearchState from '../states/SearchState';
+import Mithril from 'mithril';
+/**
+ * The `SearchSource` interface defines a section of search results in the
+ * search dropdown.
+ *
+ * Search sources should be registered with the `Search` component class
+ * by extending the `sourceItems` method. When the user types a
+ * query, each search source will be prompted to load search results via the
+ * `search` method. When the dropdown is redrawn, it will be constructed by
+ * putting together the output from the `view` method of each source.
+ */
+export interface SearchSource {
+    /**
+     * Make a request to get results for the given query.
+     */
+    search(query: string): any;
+    /**
+     * Get an array of virtual <li>s that list the search results for the given
+     * query.
+     */
+    view(query: string): Array<Mithril.Vnode>;
+}
+export interface SearchAttrs extends ComponentAttrs {
+    /** The type of alert this is. Will be used to give the alert a class name of `Alert--{type}`. */
+    state: SearchState;
+}
 /**
  * The `Search` component displays a menu of as-you-type results from a variety
  * of sources.
@@ -10,38 +40,37 @@
  *
  * - state: SearchState instance.
  */
-export default class Search extends Component<import("../../common/Component").ComponentAttrs> {
+export default class Search<T extends SearchAttrs = SearchAttrs> extends Component<T> {
     static MIN_SEARCH_LEN: number;
-    state: any;
+    protected state: SearchState;
     /**
      * Whether or not the search input has focus.
-     *
-     * @type {Boolean}
      */
-    hasFocus: boolean;
+    protected hasFocus: boolean;
     /**
      * An array of SearchSources.
-     *
-     * @type {SearchSource[]}
      */
-    sources: any[];
+    protected sources: SearchSource[];
     /**
      * The number of sources that are still loading results.
-     *
-     * @type {Integer}
      */
-    loadingSources: any;
+    protected loadingSources: number;
     /**
      * The index of the currently-selected <li> in the results list. This can be
      * a unique string (to account for the fact that an item's position may jump
      * around as new results load), but otherwise it will be numeric (the
      * sequential position within the list).
-     *
-     * @type {String|Integer}
      */
-    index: string | any;
-    onupdate(): void;
-    navigator: KeyboardNavigatable;
+    protected index: number;
+    protected navigator: KeyboardNavigatable;
+    protected searchTimeout?: number;
+    private updateMaxHeightHandler?;
+    oninit(vnode: Mithril.Vnode<T, this>): void;
+    view(): JSX.Element;
+    updateMaxHeight(): void;
+    onupdate(vnode: any): void;
+    oncreate(vnode: any): void;
+    onremove(vnode: any): void;
     /**
      * Navigate to the currently selected search result and close the list.
      */
@@ -52,39 +81,23 @@ export default class Search extends Component<import("../../common/Component").C
     clear(): void;
     /**
      * Build an item list of SearchSources.
-     *
-     * @return {ItemList}
      */
     sourceItems(): ItemList;
     /**
      * Get all of the search result items that are selectable.
-     *
-     * @return {jQuery}
      */
-    selectableItems(): JQueryStatic;
+    selectableItems(): JQuery;
     /**
      * Get the position of the currently selected search result item.
-     *
-     * @return {Integer}
      */
-    getCurrentNumericIndex(): any;
+    getCurrentNumericIndex(): number;
     /**
      * Get the <li> in the search results with the given index (numeric or named).
-     *
-     * @param {String} index
-     * @return {DOMElement}
      */
-    getItem(index: string): any;
+    getItem(index: number): JQuery;
     /**
      * Set the currently-selected search result item to the one with the given
      * index.
-     *
-     * @param {Integer} index
-     * @param {Boolean} scrollToItem Whether or not to scroll the dropdown so that
-     *     the item is in view.
      */
-    setIndex(index: any, scrollToItem: boolean): void;
+    setIndex(index: number, scrollToItem?: boolean): void;
 }
-import Component from "../../common/Component";
-import KeyboardNavigatable from "../utils/KeyboardNavigatable";
-import ItemList from "../../common/utils/ItemList";

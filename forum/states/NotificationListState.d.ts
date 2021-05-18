@@ -1,33 +1,14 @@
-export default class NotificationListState {
-    constructor(app: any);
-    app: any;
-    notificationPages: any[];
-    loading: boolean;
-    moreResults: boolean;
-    clear(): void;
-    getNotificationPages(): any[];
-    isLoading(): boolean;
-    hasMoreResults(): boolean;
-    /**
-     * Load notifications into the application's cache if they haven't already
-     * been loaded.
-     */
-    load(): void;
+import PaginatedListState from '../../common/states/PaginatedListState';
+import Notification from '../../common/models/Notification';
+export default class NotificationListState extends PaginatedListState<Notification> {
+    constructor();
+    get type(): string;
     /**
      * Load the next page of notification results.
-     *
-     * @public
      */
-    public loadMore(): any;
-    /**
-     * Parse results and append them to the notification list.
-     *
-     * @param {Notification[]} results
-     * @return {Notification[]}
-     */
-    parseResults(results: Notification[]): Notification[];
+    load(): Promise<void>;
     /**
      * Mark all of the notifications as read.
      */
-    markAllAsRead(): void;
+    markAllAsRead(): Promise<any>;
 }

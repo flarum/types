@@ -10,11 +10,10 @@
  * - `onPositionChange`
  */
 export default class PostStream extends Component<import("../../common/Component").ComponentAttrs> {
+    constructor();
     discussion: any;
     stream: any;
     scrollListener: ScrollListener;
-    onupdate(): void;
-    onremove(): void;
     /**
      * Start scrolling, if appropriate, to a newly-targeted post.
      */

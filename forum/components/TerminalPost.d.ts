@@ -7,5 +7,6 @@
  * - `lastPost`
  */
 export default class TerminalPost extends Component<import("../../common/Component").ComponentAttrs> {
+    constructor();
 }
 import Component from "../../common/Component";

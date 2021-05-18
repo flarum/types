@@ -10,8 +10,8 @@
  * @see https://getbootstrap.com/docs/3.4/javascript/#affix
  */
 export default class AffixedSidebar extends Component<import("../../common/Component").ComponentAttrs> {
+    constructor();
     boundOnresize: any;
-    onremove(): void;
     onresize(): void;
     bottom: number;
 }

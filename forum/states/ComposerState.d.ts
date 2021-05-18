@@ -159,11 +159,11 @@ declare class ComposerState {
     computedHeight(): any | string;
 }
 declare namespace ComposerState {
-    export namespace Position {
-        export const HIDDEN: string;
-        export const NORMAL: string;
-        export const MINIMIZED: string;
-        export const FULLSCREEN: string;
+    namespace Position {
+        const HIDDEN: string;
+        const NORMAL: string;
+        const MINIMIZED: string;
+        const FULLSCREEN: string;
     }
 }
 import EditorDriverInterface from "../../common/utils/EditorDriverInterface";

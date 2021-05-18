@@ -1,6 +1,6 @@
 export default class AdminNav extends Component<import("../../common/Component").ComponentAttrs> {
+    constructor();
     query: Stream<string>;
-    onupdate(): void;
     scrollToActive(): void;
     /**
      * Build an item list of main links to show in the admin navigation.

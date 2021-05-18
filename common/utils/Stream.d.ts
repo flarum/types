@@ -1,2 +1,2 @@
+import Stream from 'mithril/stream';
 export default Stream;
-import Stream from "mithril/stream";

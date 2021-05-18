@@ -8,14 +8,13 @@
  * - `className`
  */
 export default class PostStreamScrubber extends Component<import("../../common/Component").ComponentAttrs> {
+    constructor();
     stream: any;
     handlers: {};
     scrollListener: ScrollListener;
-    onupdate(): void;
     dragging: boolean;
     mouseStart: any;
     indexStart: any;
-    onremove(): void;
     /**
      * Update the scrollbar's position to reflect the current values of the
      * index/visible properties.

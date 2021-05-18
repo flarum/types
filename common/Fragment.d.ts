@@ -1,4 +1,3 @@
-/// <reference types="jquery" />
 import * as Mithril from 'mithril';
 /**
  * The `Fragment` class represents a chunk of DOM that is rendered once with Mithril and then takes

@@ -8,6 +8,7 @@
  * - `post`
  */
 export default class PostMeta extends Component<import("../../common/Component").ComponentAttrs> {
+    constructor();
     /**
      * Get the permalink for the given post.
      *

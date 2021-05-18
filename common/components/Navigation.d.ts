@@ -14,6 +14,7 @@
  *   there is no more history to pop.
  */
 export default class Navigation extends Component<import("../Component").ComponentAttrs> {
+    constructor();
     /**
      * Get the back button.
      *

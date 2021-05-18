@@ -6,7 +6,6 @@ export default class IndexPage extends Page {
     static providesInitialSearch: boolean;
     lastDiscussion: any;
     setTitle(): void;
-    onbeforeremove(): void;
     /**
      * Get the component to display as the hero.
      *

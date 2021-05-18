@@ -16,12 +16,15 @@ declare var _default: {
     'utils/mixin': typeof import("../common/utils/mixin").default;
     'utils/humanTime': typeof import("../common/utils/humanTime").default;
     'utils/computed': typeof import("../common/utils/computed").default;
+    'utils/insertText': typeof import("../common/utils/insertText").default;
+    'utils/styleSelectedText': typeof import("../common/utils/styleSelectedText").default;
     'utils/Drawer': typeof import("../common/utils/Drawer").default;
     'utils/anchorScroll': typeof import("../common/utils/anchorScroll").default;
     'utils/RequestError': typeof import("../common/utils/RequestError").default;
     'utils/abbreviateNumber': typeof import("../common/utils/abbreviateNumber").default;
     'utils/string': typeof import("../common/utils/string");
     'utils/SubtreeRetainer': typeof import("../common/utils/SubtreeRetainer").default;
+    'utils/escapeRegExp': typeof import("../common/utils/escapeRegExp").default;
     'utils/extract': typeof import("../common/utils/extract").default;
     'utils/ScrollListener': typeof import("../common/utils/ScrollListener").default;
     'utils/stringToColor': typeof import("../common/utils/stringToColor").default;
@@ -34,11 +37,12 @@ declare var _default: {
     }, namespace: string) => {
         [key: string]: any;
     };
-    'utils/classList': typeof import("../common/utils/classList").default;
+    'utils/classList': (...classes: import("clsx").ClassValue[]) => string;
     'utils/extractText': typeof import("../common/utils/extractText").default;
     'utils/formatNumber': typeof import("../common/utils/formatNumber").default;
     'utils/mapRoutes': typeof import("../common/utils/mapRoutes").default;
     'utils/withAttr': (key: string, cb: Function) => (this: Element) => void;
+    'utils/throttleDebounce': typeof import("../common/utils/throttleDebounce");
     'models/Notification': typeof import("../common/models/Notification").default;
     'models/User': typeof import("../common/models/User").default;
     'models/Post': typeof import("../common/models/Post").default;
@@ -72,6 +76,8 @@ declare var _default: {
     'components/GroupBadge': typeof import("../common/components/GroupBadge").default;
     'components/TextEditor': typeof import("../common/components/TextEditor").default;
     'components/TextEditorButton': typeof import("../common/components/TextEditorButton").default;
+    'components/Tooltip': typeof import("../common/components/Tooltip").default;
+    'components/EditUserModal': typeof import("../common/components/EditUserModal").default;
     Model: typeof import("../common/Model").default;
     Application: typeof import("../common/Application").default;
     'helpers/fullTime': typeof import("../common/helpers/fullTime").default;
@@ -84,6 +90,7 @@ declare var _default: {
     'helpers/userOnline': typeof import("../common/helpers/userOnline").default;
     'helpers/listItems': typeof import("../common/helpers/listItems").default;
     'resolvers/DefaultResolver': typeof import("../common/resolvers/DefaultResolver").default;
+    'states/PaginatedListState': typeof import("../common/states/PaginatedListState").default;
 } & {
     'utils/saveSettings': typeof saveSettings;
     'utils/ExtensionData': typeof ExtensionData;
@@ -109,6 +116,7 @@ declare var _default: {
     'components/LoadingModal': typeof LoadingModal;
     'components/DashboardPage': typeof DashboardPage;
     'components/BasicsPage': typeof BasicsPage;
+    'components/UserListPage': typeof UserListPage;
     'components/EditCustomHeaderModal': typeof EditCustomHeaderModal;
     'components/PermissionsPage': typeof PermissionsPage;
     'components/PermissionDropdown': typeof PermissionDropdown;
@@ -144,6 +152,7 @@ import UploadImageButton from "./components/UploadImageButton";
 import LoadingModal from "./components/LoadingModal";
 import DashboardPage from "./components/DashboardPage";
 import BasicsPage from "./components/BasicsPage";
+import UserListPage from "./components/UserListPage";
 import EditCustomHeaderModal from "./components/EditCustomHeaderModal";
 import PermissionsPage from "./components/PermissionsPage";
 import PermissionDropdown from "./components/PermissionDropdown";

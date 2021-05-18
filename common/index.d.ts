@@ -1,2 +1,2 @@
 export { Extend };
-import * as Extend from "./extend";
+import * as Extend from "./extend/index";

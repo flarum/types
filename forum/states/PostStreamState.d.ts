@@ -182,5 +182,5 @@ declare class PostStreamState {
     sanitizeIndex(index: number): number;
 }
 declare namespace PostStreamState {
-    export const loadCount: number;
+    const loadCount: number;
 }

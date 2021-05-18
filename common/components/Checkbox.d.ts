@@ -11,6 +11,7 @@
  * - `children` A text label to display next to the checkbox.
  */
 export default class Checkbox extends Component<import("../Component").ComponentAttrs> {
+    constructor();
     /**
      * Get the template for the checkbox's display (tick/cross icon).
      *

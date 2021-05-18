@@ -9,36 +9,46 @@
  * Care should be taken to extend the correct object – in most cases, a class'
  * prototype will be the desired target of extension, not the class itself.
  *
- * @example
+ * @example <caption>Example usage of extending one method.</caption>
  * extend(Discussion.prototype, 'badges', function(badges) {
  *   // do something with `badges`
  * });
  *
- * @param {Object} object The object that owns the method
- * @param {String} method The name of the method to extend
+ * @example <caption>Example usage of extending multiple methods.</caption>
+ * extend(IndexPage.prototype, ['oncreate', 'onupdate'], function(vnode) {
+ *   // something that needs to be run on creation and update
+ * });
+ *
+ * @param {object} object The object that owns the method
+ * @param {string|string[]} methods The name or names of the method(s) to extend
  * @param {function} callback A callback which mutates the method's output
  */
-export function extend(object: any, method: string, callback: Function): void;
+export function extend(object: object, methods: string | string[], callback: Function): void;
 /**
  * Override an object's method by replacing it with a new function, so that the
  * new function will be run every time the object's method is called.
  *
  * The replacement function accepts the original method as its first argument,
- * which is like a call to 'super'. Any arguments passed to the original method
+ * which is like a call to `super`. Any arguments passed to the original method
  * are also passed to the replacement.
  *
  * Care should be taken to extend the correct object – in most cases, a class'
  * prototype will be the desired target of extension, not the class itself.
  *
- * @example
+ * @example <caption>Example usage of overriding one method.</caption>
  * override(Discussion.prototype, 'badges', function(original) {
  *   const badges = original();
  *   // do something with badges
  *   return badges;
  * });
  *
- * @param {Object} object The object that owns the method
- * @param {String} method The name of the method to override
+ * @example <caption>Example usage of overriding multiple methods.</caption>
+ * extend(Discussion.prototype, ['oncreate', 'onupdate'], function(original, vnode) {
+ *   // something that needs to be run on creation and update
+ * });
+ *
+ * @param {object} object The object that owns the method
+ * @param {string|string[]} method The name or names of the method(s) to override
  * @param {function} newMethod The method to replace it with
  */
-export function override(object: any, method: string, newMethod: Function): void;
+export function override(object: object, methods: any, newMethod: Function): void;
